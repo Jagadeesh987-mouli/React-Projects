@@ -1,0 +1,207 @@
+#heading{
+  text-align: center;
+  background-color: tomato;
+  color: white;
+  padding: 20px;
+}
+body{
+  background-color: rgb(240, 208, 202);
+  height: 100vh;
+}
+.inp {
+  height: 40px;
+  width: 200px;
+  border: 3px solid rgb(244, 93, 66);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+
+.inp:focus {
+  box-shadow: 0 0 10px 3px rgba(255, 99, 71, 0.5); /* Tomato-like color with opacity */
+  border: 3px solid rgba(255, 99, 71, 1); /* Tomato border */
+  outline: none;
+}
+
+button{
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+}
+button:hover{
+  background-color: tomato;
+  color: white;
+  border: none;
+  scale: 1.08;
+  transition: scale 0.5s ease-in;
+}
+#child4 .btn{
+  font-size: 30px;
+}
+#buttons{
+  display: flex;
+  column-gap: 50px;
+}
+.reset{
+  font-size: 20px;
+}
+.outer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+  padding: 50px;
+  height: 700px;
+}
+#set{
+  font-size: 20px;
+}
+#num{
+  font-size: 100px;
+  font-weight: 500;
+  font-family: 'Courier New', Courier, monospace;
+}
+#errorText{
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 18px;
+}
+
+#child1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+}
+.text{
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  #heading {
+    font-size: 24px;  /* Smaller font for the heading */
+    padding: 10px;
+  }
+
+  body {
+    height: auto;
+    padding: 20px;  /* Padding for smaller screens */
+  }
+
+  input {
+    width: 150px;  /* Reduce width of input fields */
+    font-size: 16px;  /* Adjust font size */
+  }
+
+  button {
+    width: 80px;  /* Make buttons smaller */
+    font-size: 16px;
+  }
+
+  #num {
+    font-size: 60px;  /* Reduce font size of the number */
+  }
+
+  .outer {
+    padding: 20px;  /* Adjust padding */
+    height: auto;  /* Allow the container to adjust its height */
+  }
+
+  #child1 {
+    flex-direction: column;  /* Stack the input fields vertically */
+    row-gap: 15px;  /* Reduce space between input fields */
+  }
+
+  #buttons {
+    flex-direction: column;  /* Stack the buttons vertically */
+    row-gap: 10px;  /* Reduce space between buttons */
+    align-items: center;  /* Center align buttons */
+  }
+
+  .reset {
+    font-size: 18px;  /* Adjust reset button font size */
+  }
+
+  .text {
+    font-size: 14px;  /* Adjust the label font size */
+  }
+
+  #set {
+    font-size: 16px;  /* Adjust apply button font size */
+  }
+
+  #child2, #child3, #child4 {
+    width: 100%;  /* Ensure these sections take up full width */
+    text-align: center;
+  }
+}
+
+
+/* Extra Small Mobile View */
+@media (max-width: 480px) {
+  #heading {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  input {
+    width: 100%;  /* Make input fields take full width */
+    font-size: 14px;
+  }
+
+  button {
+    width: 80px;  /* Keep buttons small */
+    font-size: 14px;
+  }
+
+  #num {
+    font-size: 50px;  /* Reduce font size for the number */
+  }
+
+  .outer {
+    padding: 15px;  /* Less padding for smaller screens */
+    height: auto;
+  }
+
+  #child1 {
+    flex-direction: column;  /* Stack input fields vertically */
+    row-gap: 10px;
+  }
+
+  #buttons {
+    flex-direction: column;  /* Stack the buttons vertically */
+    row-gap: 8px;  /* Adjust spacing */
+    align-items: center;
+  }
+
+  .reset {
+    font-size: 16px;
+  }
+
+  .text {
+    font-size: 12px;  /* Reduce font size of labels */
+  }
+
+  #set {
+    font-size: 14px;
+  }
+
+  #child2, #child3, #child4 {
+    width: 100%;
+    text-align: center;
+  }
+
+  #errorText {
+    font-size: 16px;  /* Adjust font size for error messages */
+  }
+}
+
