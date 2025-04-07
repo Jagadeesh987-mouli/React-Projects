@@ -29,6 +29,7 @@ section{
   font-size: 50px;
 }
 .cell:hover{
+  cursor: pointer;
   scale: 1.05;
   transition: scale 0.3s ease-in;
   border: 2px solid rgb(99, 237, 68);
@@ -46,4 +47,33 @@ section{
   transition: scale 0.3s ease-in;
   background-color: black;
   color: white;
+}
+.winner{
+  color: rgb(4, 251, 4);
+  background-color: rgb(242, 247, 140);
+  border-radius: 10px;
+  font-weight: 500;
+  animation: burst 1.5s ease-in-out infinite;
+}
+@keyframes burst {
+  0% {
+    box-shadow: 0px 0px 8px orange, 0px 0px 15px rgba(255, 0, 0, 0.7);
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    box-shadow: 0px 0px 15px orange, 0px 0px 15px rgba(255, 0, 0, 1);
+    transform: scale(1.05) rotate(10deg);
+  }
+  50% {
+    box-shadow: 0px 0px 30px orange, 0px 0px 15px rgba(255, 0, 0, 1);
+    transform: scale(1.1) rotate(-10deg);
+  }
+  75% {
+    box-shadow: 0px 0px 30px orange, 0px 0px 15px rgba(255, 0, 0, 1);
+    transform: scale(1.05) rotate(5deg);
+  }
+  100% {
+    box-shadow: 0px 0px 10px orange, 0px 0px 15px rgba(255, 0, 0, 0.7);
+    transform: scale(1) rotate(0deg);
+  }
 }
