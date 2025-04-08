@@ -54,7 +54,7 @@ export default function App() {
       setResult(`${account} wins!`);
       setGameOver(true); // End the game when there's a winner
     } 
-    if (moves === 8) 
+    else if (moves === 8) 
     {
       setResult('It\'s a draw!');
       setGameOver(true); // End the game if it's a draw
