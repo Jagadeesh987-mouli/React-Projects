@@ -1,0 +1,203 @@
+.container{
+    background-color: rgb(197, 194, 250);
+    width: 100vw;
+    height: 100vh;
+}
+
+header{
+    text-align: center;
+    color: rgb(79, 75, 153);
+    display: grid;
+    place-content: center;
+    height: 10vh;
+    box-shadow: 0px 0px 30px white;
+}
+@keyframes blink{
+    0%{
+        box-shadow: 0px 0px 0px white;
+    }
+    20%{
+        box-shadow: 0px 0px 15px white;
+    }
+    40%{
+        box-shadow: 0px 0px 30px white;
+    }
+    60%{
+        box-shadow: 0px 0px 30px white;
+    }
+    80%{
+        box-shadow: 0px 0px 15px white;
+    }
+    100%{
+        box-shadow: 0px 0px 0px white;
+    }
+}
+#heading{
+    text-shadow: 2px 2px 4px white, 
+    -2px -2px 4px white,
+    2px -2px 4px white,
+    -2px 2px 4px white;
+    animation: moveShadow 3s ease-in-out infinite;
+}
+@keyframes moveShadow {
+    0% {
+      text-shadow: 2px 2px 5px rgb(114, 108, 108);
+    }
+    50% {
+      text-shadow: -2px -2px 10px white;
+    }
+    100% {
+      text-shadow: 2px 2px 5px rgb(112, 106, 106);
+    }
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+}
+.inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+#inputBox{
+    height: 15%;
+    width: 50%;
+    border-radius: 15px;
+    margin-top: 5%;
+    gap: 10%;
+    box-shadow: 0px 0px 10px;
+}
+#inp{
+    padding-left: 1%;
+    width: 50%;
+    height: 32%;
+    border-radius: 10px;
+    border: 3px solid rgb(79, 75, 153);
+}
+#inp:focus{
+    outline :none;
+    border: 3px solid rgb(79, 75, 153);
+    box-shadow: 0px 0px 15px rgb(79, 75, 153);
+}
+#add{
+    padding: 1.1%;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(79, 75, 153);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+#add:hover{
+    scale: 1.05;
+    transition: scale 0.5s ease-in-out;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(79, 75, 153);
+    border: 2px solid rgb(79, 75, 153);
+    animation: none;
+}
+
+#taskBox{
+    width: 90%;
+    padding: 20px;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    align-items: start;
+}
+.tasks{
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 45%;
+    height: 100%;
+}
+.header{
+    border-bottom: 2px solid white;
+    text-align: center;
+    padding: 2%;
+}
+.wavy-underline {
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+}
+
+.wavy-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 25%, transparent 50%, rgba(0, 0, 0, 0.5) 75%);
+    background-size: 200% 100%;
+    animation: wave 1s infinite linear;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+  /* The element that will slide down */
+  .slide-down-box {
+    animation: slideDown 1s forwards; /* Slide down animation */
+  }
+  
+  /* Keyframes for sliding down */
+  @keyframes slideDown {
+    0% {
+      transform: translateX(-500px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+  }
+  
+.taskList{
+    padding: 2%;
+}
+.item{
+    list-style-type: none;
+    padding: 1.5%;
+}
+#task{
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+}
+#btns{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+}
+.btn
+{
+    background-color: rgb(79, 75, 153);
+    border: 2px solid rgb(79, 75, 153);
+    color: white;
+    border-radius: 5px;
+    padding: 2%;
+    margin-top: 1%;
+    font-weight: 500;
+}
+.btn:hover{
+    outline: none;
+    border: 2px solid rgb(79, 75, 153);
+    background-color: white;
+    color: rgb(79, 75, 153);
+    cursor: pointer;
+    scale: 1.05;
+    transition: scale 0.5s ease-in-out;
+}
