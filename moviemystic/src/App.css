@@ -1,0 +1,259 @@
+header{
+    text-align: center;
+    height: 10vh;
+    display: grid;
+    place-content: center;
+    background-color: rgb(254, 168, 183);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90vw;
+}
+#watch-list{
+    padding: 0.5% 1%;
+    font-size: 20px;
+    background-color: rgb(242, 226, 229);
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid rgb(242, 226, 229);
+    box-shadow: 0 0 10px;
+}
+#watch-list:hover{
+    background-color: white;
+    border: 2px solid rgb(242, 226, 229);
+    color: black;
+    box-shadow: 0px 0px 10px ;
+    animation: pulseShadow 2s infinite ease-in-out;
+}
+  
+@keyframes pulseShadow {
+    0% {
+      box-shadow: 0 0 10px 2px #e48bd2;
+    }
+    50% {
+      box-shadow: 0 0 15px 3px #00ffff;
+    }
+    100% {
+      box-shadow: 0 0 10px 2px #ee92dc;
+    }
+  }
+  
+section{
+    text-align: center;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    height: auto;
+    padding-top: 5%;
+}
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 100%;
+    padding: 3% 2%;
+}
+.card{
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(254, 168, 183);
+    box-shadow: 10px 10px 15px gray;
+}
+#card:hover{
+    scale: 1.03;
+    transition: scale 0.4s ease-in-out;
+    box-shadow: 0 0 20px 5px rgb(254, 168, 183);
+    background-color: rgb(242, 226, 229);;
+}
+#card img{
+    padding: 5px;
+}
+.title{
+    font-size: 18px;
+    font-weight: 600;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#add{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    display: none; /* Hides modal by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal.active {
+    display: flex; /* Only shows when active class is added */
+  }
+  
+.selected-list{
+    background-color: rgb(254, 168, 183);
+    height: 70%;
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 15px;
+    overflow: scroll;
+    position: relative;
+    top: 0;
+    animation: fadeDown 0.7s ease-out;
+}
+@keyframes fadeDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+#item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 1.5% 3% 1.5% 5%; 
+}
+#watchlist-title{
+    font-size: 25px;
+    padding: 10px 0px 5px 0 ;
+}
+.close-btn{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    cursor: pointer;
+}
+.close-btn:hover{
+    scale: 1.2;
+    font-weight: 600;
+}
+#movie-title{
+    font-size: 20px;
+}
+/* upto 550 px */
+@media (max-width: 550px) {
+    .head h1 {
+      display: none;
+    }
+    .head img{
+        width: 100px;
+    }
+    .head{
+        width: 85vw;
+    }
+    #watch-list{
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+    .selected-list {
+      width: 90%;
+      height: 70%;
+    }
+  
+    #watchlist-title {
+      font-size: 20px;
+    }
+  
+    #movie-title {
+      font-size: 16px;
+    }
+  
+    #item img {
+      width: 50px;
+      height: auto;
+    }
+    section{
+        padding-top: 20%;
+    }
+    .card img{
+        width: 150px;
+        height: 200px;
+    }
+    .card{
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: rgb(254, 168, 183);
+        box-shadow: 10px 10px 15px gray;
+    }
+}
+  @media (min-width: 551px) and (max-width: 786px) {
+
+    .head img{
+        width: 120px;
+    }
+    .head h1{
+        font-size: 26px;
+    }
+    .head{
+        width: 100%;
+    }
+    #watch-list{
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+
+    .selected-list {
+      width: 80%;
+      height: 75%;
+    }
+  
+    .head {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    #watch-list {
+      font-size: 16px;
+      padding: 5px 10px;
+    }
+  
+    #card img {
+      width: 160px;
+      height: 240px;
+    }
+  
+    .footer {
+      gap: 10px;
+    }
+  
+    #movie-title {
+      font-size: 18px;
+    }
+  
+    .close-btn {
+      font-size: 20px;
+      top: 2%;
+      right: 4%;
+    }
+  }
