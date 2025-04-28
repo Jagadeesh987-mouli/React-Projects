@@ -1,0 +1,15 @@
+.main{
+    background-color: aqua;
+    color: red;
+    
+}
+
+#heading{
+    text-align: center;
+    background-color: rgb(236, 123, 67);
+    color: white;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

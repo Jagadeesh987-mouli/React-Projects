@@ -1,0 +1,104 @@
+#card-container{
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr ;
+    row-gap: 20px;
+    column-gap: 20px;
+    margin: 100px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.showtime-option {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.showtime-option:hover {
+    background-color: rgb(236, 123, 67);
+    color: white;
+    border: 2px solid rgb(236, 123, 67);
+    box-shadow: 0 0 8px rgb(236, 123, 67);
+}
+
+input[type="checkbox"] {
+    display: none; /* Hide the default radio button */
+}
+
+input[type="checkbox"]:checked + label {
+    background-color: rgb(236, 123, 67); /* Selected option color */
+    color: white; /* Change text color when selected */
+    border-color: rgb(236, 123, 67);
+}
+
+input[type="checkbox"]:checked + label:hover {
+    background-color: rgb(236, 123, 67);
+}
+
+#book{
+    background-color: rgb(236, 123, 67);
+    color: white;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+#book:hover{
+    scale: 1.01;
+    box-shadow: 0 0 8px rgb(236, 123, 67);
+    transition: scale 0.3s ease-in-out;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 50px;
+}
+.card-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticketDiv
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+#noOfTickets{
+    width: 40%;
+    border: 3px solid rgb(236, 123, 67);
+    border-radius: 10px;
+}
+input:focus{
+    border: 8px solid rgb(236, 123, 67);
+    box-shadow: 0 0 5px rgb(236, 123, 67);
+    outline: none;
+}
+#card-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding-bottom: 15px;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
